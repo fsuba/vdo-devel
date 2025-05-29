@@ -180,8 +180,8 @@ static void displayDFStyle(const char *path, struct vdo_statistics *stats)
 
   // Extract the device name. Use strdup for non const string.
   char *devicePath = strdup(path);
-  strcpy(dfName, basename(devicePath));
   free(devicePath);
+  strcpy(dfName, basename(devicePath));
 
   // Display the device statistics
   if (!headerPrinted) {
